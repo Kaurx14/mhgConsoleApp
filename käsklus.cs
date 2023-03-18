@@ -16,8 +16,6 @@ namespace mhgConsoleApp
             if (commands.Contains(command))
                 return command;
 
-
-
             return null;
         }
     }
