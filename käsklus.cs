@@ -22,6 +22,11 @@ namespace mhgConsoleApp
                     Program.OrderedPizzaName = commandText[1];
                 }
 
+                if (commandText.Length > 2)
+                {
+                    Program.OrderedPizzaTag = commandText[2];
+                }
+
                 return commandText[0];
             }
 

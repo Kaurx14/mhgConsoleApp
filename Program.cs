@@ -12,9 +12,11 @@ namespace mhgConsoleApp
 
         public static string OrderedPizzaName;
         public static string OrderedKoostisosa;
+        public static string OrderedPizzaTag;
         public static Pizza.koostisosa ChosenKoostisosa;
         public static string OrderedKoostisosaAmount;
         public static int ChosenKoostisosaAmount;
+        public static string ChosenPizzaTag;
 
         static void Main(string[] args)
         {
@@ -67,15 +69,25 @@ namespace mhgConsoleApp
                              if (pizza.name == OrderedPizzaName)
                              {
                                  pizzaFound = true;
+                                 Pizza newPizza = DealWithPizzaTags(pizza);
+
                                  OrderedPizzaName = "";
-                                 order.OnPizzaBought(pizza);
-                                 Console.WriteLine("Tellitud pitsa: " + pizza.name);
-                                 Console.WriteLine("Pitsa hind: " + pizza.hind + "$");
+                                 OrderedPizzaTag = "";
+                                 order.OnPizzaBought(newPizza);
+                                 Console.WriteLine("Tellitud pitsa: " + newPizza.name);
+                                 Console.WriteLine("Pitsa hind: " + newPizza.hind + "$");
+                                 if (ChosenPizzaTag != "")
+                                 {
+                                     Console.WriteLine("Erisoov: " + ChosenPizzaTag);
+                                 }
                                  Console.WriteLine("Koostisosad: ");
-                                 foreach (var koostisosa in pizza.koostisosadList)
+                                 foreach (var koostisosa in newPizza.koostisosadList)
                                  {
                                      Console.WriteLine(koostisosa);
                                  }
+
+                                 ChosenPizzaTag = "";
+
                                  break;
                              }
                          }
@@ -93,6 +105,7 @@ namespace mhgConsoleApp
                          {
                              restock.RestockInventory(ChosenKoostisosa, ChosenKoostisosaAmount);
                              Console.WriteLine("Koostisosa " + ChosenKoostisosa + " on juurde tellitud koguses " + ChosenKoostisosaAmount + ". Hind oli " + restock.restockingPrice + ".");
+                             ChosenKoostisosaAmount = 0;
                          }
                          else
                          {
@@ -170,7 +183,6 @@ namespace mhgConsoleApp
                 isValid = true;
                 ChosenKoostisosa = Pizza.koostisosa.kana;
             }
-            else if (OrderedKoostisosa == "")
 
             return isValid;
         }
@@ -195,6 +207,69 @@ namespace mhgConsoleApp
             }
 
             return isValid;
+        }
+
+        private static Pizza DealWithPizzaTags(Pizza orderedPizza)
+        {
+            List<Pizza.koostisosa> uuedKoostisosad = new List<Pizza.koostisosa>();
+
+            foreach (var koostisosa in orderedPizza.koostisosadList)
+            {
+                uuedKoostisosad.Add(koostisosa);
+            }
+
+            if (OrderedPizzaTag == "vegan")
+            {
+                if (uuedKoostisosad.Contains(Pizza.koostisosa.kana))
+                {
+                    uuedKoostisosad.Remove(Pizza.koostisosa.kana);
+                    orderedPizza.hind -= Money.kanaTkHind;
+                }
+
+                if (uuedKoostisosad.Contains(Pizza.koostisosa.salami))
+                {
+                    uuedKoostisosad.Remove(Pizza.koostisosa.salami);
+                    orderedPizza.hind -= Money.salamiTkHind;
+                }
+
+                if (uuedKoostisosad.Contains(Pizza.koostisosa.sink))
+                {
+                    uuedKoostisosad.Remove(Pizza.koostisosa.sink);
+                }
+
+                ChosenPizzaTag = "vegan";
+            }
+            else if (OrderedPizzaTag == "gluteenivaba")
+            {
+                if (uuedKoostisosad.Contains(Pizza.koostisosa.pitsapõhi))
+                {
+                    uuedKoostisosad.Remove(Pizza.koostisosa.pitsapõhi);
+                    //orderedPizza.hind -= Money.pitsapõhiTkHind;
+                }
+
+                ChosenPizzaTag = "gluteenivaba";
+
+                uuedKoostisosad.Add(Pizza.koostisosa.gluteenivabaPitsapõhi);
+                //orderedPizza.hind += Money.gluteenivabaPitsapõhiTkHind;
+            }
+            else if (OrderedPizzaTag == "laktoosivaba")
+            {
+                if (uuedKoostisosad.Contains(Pizza.koostisosa.juust))
+                {
+                    uuedKoostisosad.Remove(Pizza.koostisosa.juust);
+                    orderedPizza.hind -= Money.juustTkHind;
+                }
+
+                ChosenPizzaTag = "laktoosivaba";
+            }
+            else
+            {
+                ChosenPizzaTag = "";
+            }
+
+            orderedPizza.koostisosadList = menu.ListToArray(uuedKoostisosad);
+
+            return orderedPizza;
         }
     }
 }

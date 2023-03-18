@@ -8,6 +8,7 @@
         public enum koostisosa
         {
             pitsapõhi,
+            gluteenivabaPitsapõhi,
             kaste,
             juust,
             pepperoni,
