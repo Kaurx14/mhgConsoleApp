@@ -71,7 +71,7 @@ namespace mhgConsoleApp
             Pizza.koostisosa[] lõppPitsaKoostisosad = ListToArray<Pizza.koostisosa>(uuePitsaKoostisosad);
 
 
-            pizzaList.Add(new Pizza("pizzaName", currentPizzaHind * 1.2f, lõppPitsaKoostisosad));
+            pizzaList.Add(new Pizza(pizzaName, currentPizzaHind * 1.2f, lõppPitsaKoostisosad));
         }
 
         public List<string> SplitSentenceToList(string command)
