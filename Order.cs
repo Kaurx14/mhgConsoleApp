@@ -14,19 +14,19 @@ namespace mhgConsoleApp
 
             var koostisosad = orderedPizza.koostisosadList;
 
-            if(koostisosad.Contains(Pizza.koostisosad.pepperoni))
+            if(koostisosad.Contains(Pizza.koostisosa.pepperoni))
             {
                 Inventory.pepperoni -= 1;
             }
-            if (koostisosad.Contains(Pizza.koostisosad.juust))
+            if (koostisosad.Contains(Pizza.koostisosa.juust))
             {
                 Inventory.juust -= 1;
             }
-            if (koostisosad.Contains(Pizza.koostisosad.tomatikaste))
+            if (koostisosad.Contains(Pizza.koostisosa.tomatikaste))
             {
                 Inventory.tomatikaste -= 1;
             }
-            if (koostisosad.Contains(Pizza.koostisosad.rukola))
+            if (koostisosad.Contains(Pizza.koostisosa.rukola))
             {
                 Inventory.tomatikaste -= 1;
             }
