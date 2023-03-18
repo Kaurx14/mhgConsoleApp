@@ -18,7 +18,6 @@
             sink,
             šampinjonid,
             oliivid,
-            tomatid,
             hakkliha,
             ananass,
 
