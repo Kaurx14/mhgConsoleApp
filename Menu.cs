@@ -32,38 +32,65 @@ namespace mhgConsoleApp
            
         }
 
-        //public Pizza AddNewPizzaToMenu()
-        //{
-        //    Console.WriteLine("Sisesta uue pitsa nimi: ");
+        public void AddNewPizzaToMenu()
+        {
+            Console.WriteLine("Sisesta uue pitsa nimi: ");
 
-        //    string pizzaName = Console.ReadLine();
+            string pizzaName = Console.ReadLine();
 
-        //    Console.WriteLine("Sisesta uue pitsa koostisosad, eraldades need komaga: ");
+            Console.WriteLine("Sisesta uue pitsa koostisosad, eraldades need komaga: ");
 
-        //    string pitsaKoostisosad = Console.ReadLine();
-        //    pitsaKoostisosad = pitsaKoostisosad.ToLower();
-        //    List<string> koostisosad = käsklus.SplitSentence(pitsaKoostisosad);
+            string pitsaKoostisosad = Console.ReadLine();
+            pitsaKoostisosad = pitsaKoostisosad.ToLower();
+            List<string> koostisosad = SplitSentenceToList(pitsaKoostisosad);
+            float currentPizzaHind = 0;
+            List<Pizza.koostisosa> uuePitsaKoostisosad = new List<Pizza.koostisosa>();
 
-        //    if (koostisosad.Contains("pepperoni"))
-        //    {
+            if (koostisosad.Contains("pepperoni"))
+            {
+                currentPizzaHind += Money.pepperoniTkHind;
+                uuePitsaKoostisosad.Add(Pizza.koostisosa.pepperoni);
+            }
+            if (koostisosad.Contains("juust"))
+            {
+                currentPizzaHind += Money.juustTkHind;
+                uuePitsaKoostisosad.Add(Pizza.koostisosa.juust);
+            }
+            if (koostisosad.Contains("tomatikaste"))
+            {
+                currentPizzaHind += Money.tomatikasteTkHind;
+                uuePitsaKoostisosad.Add(Pizza.koostisosa.tomatikaste);
+            }
 
-        //    }
+            if (koostisosad.Contains("rukola"))
+            {
+                currentPizzaHind += Money.rukolaTkHind;
+                uuePitsaKoostisosad.Add(Pizza.koostisosa.rukola);
+            }
 
-          
+            Pizza.koostisosa[] lõppPitsaKoostisosad = ListToArray<Pizza.koostisosa>(uuePitsaKoostisosad);
 
-        //    pizzaList.Add(new Pizza("pizzaName", (Money.pepperoniTkHind + Money.juustTkHind + Money.tomatikasteTkHind) * 1.2f, new Pizza.koostisosa[] { Pizza.koostisosa.juust, Pizza.koostisosa.pepperoni, Pizza.koostisosa.tomatikaste }));
-        //}
 
-        //public static List<string> SplitSentenceToList(string command)
-        //{
-        //    List<string> words = command.Split('');
-        //    return words;
-        //}
+            pizzaList.Add(new Pizza("pizzaName", currentPizzaHind * 1.2f, lõppPitsaKoostisosad));
+        }
+
+        public List<string> SplitSentenceToList(string command)
+        {
+            string[] words = command.Split(',');
+            List<string> wordsConvertedToList = ArrayToList<string>(words);
+            return wordsConvertedToList;
+        }
 
         public List<T> ArrayToList<T>(T[] arr)
         {
             List<T> list = new List<T>(arr);
             return list;
+        }
+
+        public T[] ListToArray<T>(List<T> list)
+        {
+            T[] array = list.ToArray();
+            return array;
         }
     }
 }
