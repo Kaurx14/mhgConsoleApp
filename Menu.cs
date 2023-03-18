@@ -11,9 +11,9 @@ namespace mhgConsoleApp
         public List<Pizza> pizzaList = new List<Pizza>();
         public Menu()
         {
-            pizzaList.Add(new Pizza("Pepperoni", 5.00f, new Pizza.koostisosa[] { Pizza.koostisosa.juust, Pizza.koostisosa.pepperoni, Pizza.koostisosa.tomatikaste }));
-            pizzaList.Add(new Pizza("Rukola", 5.50f, new Pizza.koostisosa[] { Pizza.koostisosa.juust, Pizza.koostisosa.rukola, Pizza.koostisosa.tomatikaste }));
-            pizzaList.Add(new Pizza("Pepperoni & Rukola", 6.00f, new Pizza.koostisosa[] { Pizza.koostisosa.juust, Pizza.koostisosa.pepperoni, Pizza.koostisosa.rukola, Pizza.koostisosa.tomatikaste }));
+            pizzaList.Add(new Pizza("Pepperoni", Money.pepperoniTkHind + Money.juustTkHind + Money.tomatikasteTkHind, new Pizza.koostisosa[] { Pizza.koostisosa.juust, Pizza.koostisosa.pepperoni, Pizza.koostisosa.tomatikaste }));
+            pizzaList.Add(new Pizza("Rukola", Money.rukolaTkHind + Money.juustTkHind + Money.tomatikasteTkHind, new Pizza.koostisosa[] { Pizza.koostisosa.juust, Pizza.koostisosa.rukola, Pizza.koostisosa.tomatikaste }));
+            pizzaList.Add(new Pizza("Pepperoni & Rukola", Money.pepperoniTkHind + Money.juustTkHind + Money.tomatikasteTkHind + Money.rukolaTkHind, new Pizza.koostisosa[] { Pizza.koostisosa.juust, Pizza.koostisosa.pepperoni, Pizza.koostisosa.rukola, Pizza.koostisosa.tomatikaste }));
         }
 
         public List<Pizza> GetPizzaList()

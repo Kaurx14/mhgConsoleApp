@@ -8,8 +8,6 @@ namespace mhgConsoleApp
 {
     public class Restock
     {
-
-
         public static void RestockInventory(Pizza.koostisosa koostisosa, int kogus)
         {
             if(koostisosa == Pizza.koostisosa.pepperoni)
