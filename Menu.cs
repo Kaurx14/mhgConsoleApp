@@ -46,23 +46,23 @@ namespace mhgConsoleApp
             float currentPizzaHind = 0;
             List<Pizza.koostisosa> uuePitsaKoostisosad = new List<Pizza.koostisosa>();
 
-            if (koostisosad.Contains("pepperoni"))
+            if (pitsaKoostisosad.Contains("pepperoni"))
             {
                 currentPizzaHind += Money.pepperoniTkHind;
                 uuePitsaKoostisosad.Add(Pizza.koostisosa.pepperoni);
             }
-            if (koostisosad.Contains("juust"))
+            if (pitsaKoostisosad.Contains("juust"))
             {
                 currentPizzaHind += Money.juustTkHind;
                 uuePitsaKoostisosad.Add(Pizza.koostisosa.juust);
             }
-            if (koostisosad.Contains("tomatikaste"))
+            if (pitsaKoostisosad.Contains("kaste"))
             {
                 currentPizzaHind += Money.kasteTkHind;
                 uuePitsaKoostisosad.Add(Pizza.koostisosa.kaste);
             }
 
-            if (koostisosad.Contains("rukola"))
+            if (pitsaKoostisosad.Contains("rukola"))
             {
                 currentPizzaHind += Money.rukolaTkHind;
                 uuePitsaKoostisosad.Add(Pizza.koostisosa.rukola);
