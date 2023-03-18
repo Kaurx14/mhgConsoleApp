@@ -12,7 +12,9 @@ namespace mhgConsoleApp
 
         public static string OrderedPizzaName;
         public static string OrderedKoostisosa;
+        public static Pizza.koostisosa ChosenKoostisosa;
         public static string OrderedKoostisosaAmount;
+        public static int ChosenKoostisosaAmount;
 
         static void Main(string[] args)
         {
@@ -87,16 +89,15 @@ namespace mhgConsoleApp
                      }
                      else if (verifiedCommand == "RESTOCK")
                      {
-                         if (CheckIfKoostisosaIsValid())
+                         if (CheckIfKoostisosaIsValid() && CheckIfKoostisosaAmountIsValid())
                          {
-
+                             restock.RestockInventory(ChosenKoostisosa, ChosenKoostisosaAmount);
+                             Console.WriteLine("Koostisosa " + ChosenKoostisosa + " on juurde tellitud koguses " + ChosenKoostisosaAmount + ". Hind oli " + restock.restockingPrice + ".");
                          }
                          else
                          {
-                             Console.WriteLine("");
+                             Console.WriteLine("Sisetage korrektne koostisosa ja korrektne kogus.");
                          }
-
-                         restock.RestockInventory();
                      }
                      else if (verifiedCommand == "ADD PIZZA")
                      {
@@ -127,18 +128,44 @@ namespace mhgConsoleApp
             if (OrderedKoostisosa == "juust")
             {
                 isValid = true;
+                ChosenKoostisosa = Pizza.koostisosa.juust;
             }
             else if (OrderedKoostisosa == "pepperoni")
             {
                 isValid = true;
+                ChosenKoostisosa = Pizza.koostisosa.pepperoni;
             }
             else if (OrderedKoostisosa == "rukola")
             {
                 isValid = true;
+                ChosenKoostisosa = Pizza.koostisosa.rukola;
             }
             else if (OrderedKoostisosa == "tomatikaste")
             {
                 isValid = true;
+                ChosenKoostisosa = Pizza.koostisosa.tomatikaste;
+            }
+
+            return isValid;
+        }
+
+        private static bool CheckIfKoostisosaAmountIsValid()
+        {
+            bool isValid = false;
+
+            try
+            {
+                int amount = int.Parse(OrderedKoostisosaAmount);
+
+                if (amount > 0)
+                {
+                    ChosenKoostisosaAmount = amount;
+                    isValid = true;
+                }
+            }
+            catch (Exception)
+            {
+                isValid = false;
             }
 
             return isValid;

@@ -17,7 +17,7 @@ namespace mhgConsoleApp
 
                 string[] commandText = SplitSentence(command);
 
-                if (commandText.Length > 0)
+                if (commandText.Length > 1)
                 {
                     Program.OrderedPizzaName = commandText[1];
                 }
@@ -31,12 +31,12 @@ namespace mhgConsoleApp
 
                 string[] commandText = SplitSentence(command);
 
-                if (commandText.Length > 0)
+                if (commandText.Length > 1)
                 {
                     Program.OrderedKoostisosa = commandText[1];
                 }
 
-                if (commandText.Length > 1)
+                if (commandText.Length > 2)
                 {
                     Program.OrderedKoostisosaAmount = commandText[2];
                 }
@@ -53,6 +53,7 @@ namespace mhgConsoleApp
         private static string[] SplitSentence(string command)
         {
             string[] words = command.Split(' ');
+
             return words;
         }
     }
