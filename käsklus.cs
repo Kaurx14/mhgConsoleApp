@@ -11,10 +11,27 @@ namespace mhgConsoleApp
         public static string[] commands = { "MENU", "INVENTORY", "MONEY", "ORDER", "RESTOCK", "ADD PIZZA", "HISTORY", "SOLD" };
         public static string VerifyCommand(string command)
         {
+            if (command.StartsWith("O"))
+            {
+                command.ToUpper();
+
+                string[] commandText = SplitSentence(command);
+
+                Program.OrderedPizzaName = commandText[1];
+
+                return commandText[0];
+            }
+
             command = command.ToUpper();
 
             if (commands.Contains(command)) return command;
             else return null;
+        }
+
+        private static string[] SplitSentence(string command)
+        {
+            string[] words = command.Split(' ');
+            return words;
         }
     }
 }

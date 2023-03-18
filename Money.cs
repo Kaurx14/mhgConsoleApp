@@ -15,7 +15,7 @@ namespace mhgConsoleApp
         public static float juustTkHind = 2.5f;
         public static float rukolaTkPrice = 0.5f;
 
-        public static string GetMoney()
+        public string GetMoney()
         {
             string raha = "Poes olev raha: " + money + "€";
             return raha;
