@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mhgConsoleApp
 {
-    public class pitsa
+    public class Pizza
     {
         public string name;
         public float hind;
@@ -19,12 +19,12 @@ namespace mhgConsoleApp
             rukola
         }
 
-        //public pitsa(string name, float hind, koostisosad[] koostisosad)
-        //{
-        //    this.name = name;
-        //    this.hind = hind;
-        //    this.koostisosad = koostisosad;
-        //}
+        public Pizza(string name, float hind, koostisosad[] koostisosad)
+        {
+            this.name = name;
+            this.hind = hind;
+            koostisosad = koostisosad;
+        }
         
     }
 }
