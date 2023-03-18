@@ -101,7 +101,7 @@ namespace mhgConsoleApp
                      }
                      else if (verifiedCommand == "ADD PIZZA")
                      {
-                         
+                         menu.AddNewPizzaToMenu();
                      }
                      else if (verifiedCommand == "HISTORY")
                      {
@@ -140,10 +140,10 @@ namespace mhgConsoleApp
                 isValid = true;
                 ChosenKoostisosa = Pizza.koostisosa.rukola;
             }
-            else if (OrderedKoostisosa == "tomatikaste")
+            else if (OrderedKoostisosa == "kaste")
             {
                 isValid = true;
-                ChosenKoostisosa = Pizza.koostisosa.tomatikaste;
+                ChosenKoostisosa = Pizza.koostisosa.kaste;
             }
 
             return isValid;
