@@ -2,8 +2,10 @@
 
 namespace mhgConsoleApp
 {
-    class Program
+    static class Program
     {
+        public static Menu menu = new Menu();
+
         static void Main(string[] args)
         {
             Console.WriteLine("Program started!");
@@ -23,7 +25,19 @@ namespace mhgConsoleApp
                  {
                      if (verifiedCommand == "MENU")
                      {
+                         List<Pizza> pizzas = menu.GetPizzaList();
 
+                         foreach (Pizza pizza in pizzas)
+                         {
+                             Console.WriteLine(pizza.name + " " + pizza.hind);
+                             Console.WriteLine("Koostisosad: ");
+                             foreach (var koostisosa in pizza.koostisosadList)
+                             {
+                                 Console.WriteLine(koostisosa);
+                             }
+
+                             Console.WriteLine("");
+                         }
                      }
                  }
             }
