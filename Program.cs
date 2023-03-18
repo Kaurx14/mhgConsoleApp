@@ -188,10 +188,10 @@ namespace mhgConsoleApp
                 isValid = true;
                 ChosenKoostisosa = Pizza.koostisosa.oliivid;
             }
-            else if (OrderedKoostisosa == "šampinjonid")
+            else if (OrderedKoostisosa == "shampinjonid")
             {
                 isValid = true;
-                ChosenKoostisosa = Pizza.koostisosa.šampinjonid;
+                ChosenKoostisosa = Pizza.koostisosa.shampinjonid;
             }
             else if (OrderedKoostisosa == "kana")
             {

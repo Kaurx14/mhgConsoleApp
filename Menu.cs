@@ -13,7 +13,7 @@ namespace mhgConsoleApp
         {
             pizzaList.Add(new Pizza("Pepperoni", (Money.pepperoniTkHind + Money.juustTkHind + Money.kasteTkHind) * 1.2f, new Pizza.koostisosa[] { Pizza.koostisosa.juust, Pizza.koostisosa.pepperoni, Pizza.koostisosa.kaste }));
             pizzaList.Add(new Pizza("Rukola", (Money.rukolaTkHind + Money.juustTkHind + Money.kasteTkHind) * 1.2f, new Pizza.koostisosa[] { Pizza.koostisosa.juust, Pizza.koostisosa.rukola, Pizza.koostisosa.kaste }));
-            pizzaList.Add(new Pizza("Napolitana", (Money.pepperoniTkHind + Money.juustTkHind + Money.kasteTkHind + Money.rukolaTkHind + Money.kanaTkHind) * 1.2f, new Pizza.koostisosa[] { Pizza.koostisosa.juust, Pizza.koostisosa.pepperoni, Pizza.koostisosa.rukola, Pizza.koostisosa.kaste, Pizza.koostisosa.kana }));
+            pizzaList.Add(new Pizza("Pepperoni & Rukola", (Money.pepperoniTkHind + Money.juustTkHind + Money.kasteTkHind + Money.rukolaTkHind) * 1.2f, new Pizza.koostisosa[] { Pizza.koostisosa.juust, Pizza.koostisosa.pepperoni, Pizza.koostisosa.rukola, Pizza.koostisosa.kaste }));
         }
 
         public List<Pizza> GetPizzaList()
@@ -92,10 +92,10 @@ namespace mhgConsoleApp
                 currentPizzaHind += Money.sinkTkHInd;
                 uuePitsaKoostisosad.Add(Pizza.koostisosa.sink);
             }
-            if (pitsaKoostisosad.Contains("šampinjonid"))
+            if (pitsaKoostisosad.Contains("shampinjonid"))
             {
-                currentPizzaHind += Money.šampinjonidTkHind;
-                uuePitsaKoostisosad.Add(Pizza.koostisosa.šampinjonid);
+                currentPizzaHind += Money.shampinjonidTkHind;
+                uuePitsaKoostisosad.Add(Pizza.koostisosa.shampinjonid);
             }
             if (pitsaKoostisosad.Contains("oliivid"))
             {
