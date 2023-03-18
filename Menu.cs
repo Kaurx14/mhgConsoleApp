@@ -59,5 +59,11 @@ namespace mhgConsoleApp
         //    List<string> words = command.Split('');
         //    return words;
         //}
+
+        public List<T> ArrayToList<T>(T[] arr)
+        {
+            List<T> list = new List<T>(arr);
+            return list;
+        }
     }
 }
