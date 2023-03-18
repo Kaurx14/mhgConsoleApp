@@ -66,7 +66,7 @@ namespace mhgConsoleApp
                 restockingPrice = kogus * Money.sinkTkHInd;
                 Money.money -= restockingPrice;
             }
-            if (koostisosa == Pizza.koostisosa.šampinjonid)
+            if (koostisosa == Pizza.koostisosa.shampinjonid)
             {
                 Inventory.shampinjonid += kogus;
                 restockingPrice = kogus * Money.shampinjonidTkHind;
