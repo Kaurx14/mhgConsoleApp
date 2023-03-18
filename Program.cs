@@ -17,6 +17,7 @@ namespace mhgConsoleApp
 
             while (true)
             {
+                ConsoleSpace();
                 Console.WriteLine("Sisestage käsklus: ");
                 string userCommand = Console.ReadLine();
 
@@ -41,8 +42,7 @@ namespace mhgConsoleApp
                                  Console.WriteLine(koostisosa);
                              }
 
-                             Console.WriteLine("");
-                             Console.WriteLine("");
+                             ConsoleSpace();
                         }
                      }
                      else if (verifiedCommand == "INVENTORY")
@@ -54,11 +54,14 @@ namespace mhgConsoleApp
                          Console.WriteLine(money.GetMoney());
                      }
                      else if (verifiedCommand == "ORDER")
-                     {
+                     { 
+                         bool pizzaFound = false;
+
                          foreach (var pizza in menu.pizzaList)
                          {
                              if (pizza.name == OrderedPizzaName)
                              {
+                                 pizzaFound = true;
                                  OrderedPizzaName = "";
                                  order.OnPizzaBought(pizza);
                                  Console.WriteLine("Tellitud pitsa: " + pizza.name);
@@ -71,7 +74,13 @@ namespace mhgConsoleApp
                                  break;
                              }
                          }
-                         Console.WriteLine("Sisestage korrektne pitsa nimi!");
+
+                         if (!pizzaFound)
+                         {
+                             Console.WriteLine("Sisestage korrektne pitsa nimi!");
+                         }
+
+                         ConsoleSpace();
                      }
                      else if (verifiedCommand == "RESTOCK")
                      {
@@ -91,6 +100,12 @@ namespace mhgConsoleApp
                      }
                  }
             }
+        }
+
+        private static void ConsoleSpace()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("");
         }
     }
 }
