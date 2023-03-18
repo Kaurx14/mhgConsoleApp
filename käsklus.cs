@@ -17,7 +17,10 @@ namespace mhgConsoleApp
 
                 string[] commandText = SplitSentence(command);
 
-                Program.OrderedPizzaName = commandText[1];
+                if (commandText.Length > 0)
+                {
+                    Program.OrderedPizzaName = commandText[1];
+                }
 
                 return commandText[0];
             }
