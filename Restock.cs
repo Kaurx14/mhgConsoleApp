@@ -68,8 +68,8 @@ namespace mhgConsoleApp
             }
             if (koostisosa == Pizza.koostisosa.šampinjonid)
             {
-                Inventory.šampinjonid += kogus;
-                restockingPrice = kogus * Money.šampinjonidTkHind;
+                Inventory.shampinjonid += kogus;
+                restockingPrice = kogus * Money.shampinjonidTkHind;
                 Money.money -= restockingPrice;
             }
             if (koostisosa == Pizza.koostisosa.oliivid)

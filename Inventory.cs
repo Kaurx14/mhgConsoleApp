@@ -17,7 +17,7 @@ namespace mhgConsoleApp
         public static int salami = 10;
         public static int kana = 10;
         public static int sink = 10;
-        public static int šampinjonid = 10;
+        public static int shampinjonid = 10;
         public static int oliivid = 10;
         public static int hakkliha = 10;
         public static int ananass = 10;

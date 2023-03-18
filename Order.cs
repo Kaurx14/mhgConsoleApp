@@ -50,9 +50,9 @@ namespace mhgConsoleApp
             {
                 Inventory.sink -= 1;
             }
-            if (koostisosad.Contains(Pizza.koostisosa.šampinjonid))
+            if (koostisosad.Contains(Pizza.koostisosa.shampinjonid))
             {
-                Inventory.šampinjonid -= 1;
+                Inventory.shampinjonid -= 1;
             }
             if (koostisosad.Contains(Pizza.koostisosa.oliivid))
             {

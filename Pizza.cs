@@ -16,7 +16,7 @@
             salami,
             kana,
             sink,
-            šampinjonid,
+            shampinjonid,
             oliivid,
             hakkliha,
             ananass,

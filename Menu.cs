@@ -37,7 +37,7 @@ namespace mhgConsoleApp
             Console.WriteLine("Sisesta uue pitsa nimi: ");
 
             string pizzaName = Console.ReadLine();
-
+            Console.WriteLine("\nVõimalikud koostisosad: pitsapõhi, gluteenivabaPitsapõhi, juust, kaste, pepperoni, rukola, salami, kana, sink, šampinjonid, oliivid");
             Console.WriteLine("Sisesta uue pitsa koostisosad, eraldades need tühikuga: ");
 
             string pitsaKoostisosad = Console.ReadLine();

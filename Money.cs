@@ -22,7 +22,7 @@ namespace mhgConsoleApp
         public static float ananassTkHind = 2.0f;
         public static float oliividTkHind = 2.5f;
         public static float hakklihaTkHind = 1.2f;
-        public static float šampinjonidTkHind = 3f;
+        public static float shampinjonidTkHind = 3f;
 
         public string GetMoney()
         {
