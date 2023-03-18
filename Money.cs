@@ -10,7 +10,7 @@ namespace mhgConsoleApp
     {
         public static int money = 10;
 
-        public static string GetMoney()
+        public string GetMoney()
         {
             string raha = "Poes olev raha: " + money + "€";
             return raha;
