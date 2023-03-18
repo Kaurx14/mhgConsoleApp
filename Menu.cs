@@ -112,6 +112,7 @@ namespace mhgConsoleApp
 
 
             pizzaList.Add(new Pizza(pizzaName, currentPizzaHind * 1.2f, lõppPitsaKoostisosad));
+            Console.WriteLine("Pitsa \"" + pizzaName + "\" lisatud menüüsse!");
         }
 
         public List<string> SplitSentenceToList(string command)
