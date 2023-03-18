@@ -182,6 +182,11 @@ namespace mhgConsoleApp
                 isValid = true;
                 ChosenKoostisosa = Pizza.koostisosa.pitsapõhi;
             }
+            else if (OrderedKoostisosa == "gluteenivabaPitsapõhi")
+            {
+                isValid = true;
+                ChosenKoostisosa = Pizza.koostisosa.gluteenivabaPitsapõhi;
+            }
             else if (OrderedKoostisosa == "oliivid")
             {
                 isValid = true;

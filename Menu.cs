@@ -38,7 +38,7 @@ namespace mhgConsoleApp
 
             string pizzaName = Console.ReadLine();
 
-            Console.WriteLine("Sisesta uue pitsa koostisosad, eraldades need komaga: ");
+            Console.WriteLine("Sisesta uue pitsa koostisosad, eraldades need tühikuga: ");
 
             string pitsaKoostisosad = Console.ReadLine();
             pitsaKoostisosad = pitsaKoostisosad.ToLower();
@@ -50,6 +50,11 @@ namespace mhgConsoleApp
             {
                 currentPizzaHind += Money.pizzapõhiTkHind;
                 uuePitsaKoostisosad.Add(Pizza.koostisosa.pitsapõhi);
+            }
+            if (pitsaKoostisosad.Contains("gluteenivabaPitsapõhi"))
+            {
+                currentPizzaHind += Money.gluteenivabaPitsapõhiTkHind;
+                uuePitsaKoostisosad.Add(Pizza.koostisosa.gluteenivabaPitsapõhi);
             }
             if (pitsaKoostisosad.Contains("juust"))
             {
@@ -117,7 +122,7 @@ namespace mhgConsoleApp
 
         public List<string> SplitSentenceToList(string command)
         {
-            string[] words = command.Split(',');
+            string[] words = command.Split(' ');
             List<string> wordsConvertedToList = ArrayToList<string>(words);
             return wordsConvertedToList;
         }

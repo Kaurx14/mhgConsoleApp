@@ -9,6 +9,7 @@ namespace mhgConsoleApp
     public class Inventory
     {
         public static int pitsapõhi = 10;
+        public static int gluteenivabaPitsapõhi = 10;
         public static int juust = 10;
         public static int kaste = 10;
         public static int pepperoni = 10;

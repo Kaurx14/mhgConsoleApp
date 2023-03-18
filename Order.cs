@@ -18,6 +18,10 @@ namespace mhgConsoleApp
             {
                 Inventory.pitsapõhi -= 1;
             }
+            if (koostisosad.Contains(Pizza.koostisosa.gluteenivabaPitsapõhi))
+            {
+                Inventory.gluteenivabaPitsapõhi -= 1;
+            }
             if (koostisosad.Contains(Pizza.koostisosa.juust))
             {
                 Inventory.juust -= 1;

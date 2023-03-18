@@ -18,6 +18,12 @@ namespace mhgConsoleApp
                 restockingPrice = kogus * Money.pizzapõhiTkHind;
                 Money.money -= restockingPrice;
             }
+            if (koostisosa == Pizza.koostisosa.gluteenivabaPitsapõhi)
+            {
+                Inventory.gluteenivabaPitsapõhi += kogus;
+                restockingPrice = kogus * Money.gluteenivabaPitsapõhiTkHind;
+                Money.money -= restockingPrice;
+            }
             if (koostisosa == Pizza.koostisosa.juust)
             {
                 Inventory.juust += kogus;
