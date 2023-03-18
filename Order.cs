@@ -22,13 +22,13 @@ namespace mhgConsoleApp
             {
                 Inventory.juust -= 1;
             }
-            if (koostisosad.Contains(Pizza.koostisosa.tomatikaste))
+            if (koostisosad.Contains(Pizza.koostisosa.kaste))
             {
-                Inventory.tomatikaste -= 1;
+                Inventory.kaste -= 1;
             }
             if (koostisosad.Contains(Pizza.koostisosa.rukola))
             {
-                Inventory.tomatikaste -= 1;
+                Inventory.rukola -= 1;
             }
 
         }
