@@ -20,7 +20,26 @@ namespace mhgConsoleApp
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Program started!");
+            Console.WriteLine("##KASUTUSJUHEND##");
+            Console.WriteLine("");
+            Console.WriteLine("Võimalikud käsklsued on:");
+            Console.WriteLine("MENU - näitab menüüd");
+            Console.WriteLine("INVENTORY - näitab kogu inventuuri");
+            Console.WriteLine("MONEY - näitab kogu kassaraha");
+            Console.WriteLine("ORDER - teeb tellimuse");
+            Console.WriteLine("RESTOCK - täidab inventuuri");
+            Console.WriteLine("ADD - lisab uue pizza menüüsse");
+            ConsoleSpace();
+            Console.WriteLine("##Võimalikud näited##");
+            Console.WriteLine("MENU");
+            Console.WriteLine("INVENTORY");
+            Console.WriteLine("MONEY");
+            Console.WriteLine("ORDER Pepperoni");
+            Console.WriteLine("ORDER Pepperoni gluteenivaba");
+            Console.WriteLine("ORDER Pepperoni vegan");
+            Console.WriteLine("ORDER Pepperoni laktoosivaba");
+            Console.WriteLine("RESTOCK kana 50");
+            Console.WriteLine("RESTOCK kaste 25");
 
             while (true)
             {
@@ -118,12 +137,12 @@ namespace mhgConsoleApp
                      }
                      else if (verifiedCommand == "HISTORY")
                      {
-                         
+                         Console.WriteLine("Lisame tulevikus!");
                      }
                      else if (verifiedCommand == "SOLD")
                      {
-                         
-                     }
+                        Console.WriteLine("Lisame tulevikus!");
+                    }
                  }
             }
         }
