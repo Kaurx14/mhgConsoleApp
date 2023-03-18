@@ -5,6 +5,7 @@ namespace mhgConsoleApp
     static class Program
     {
         public static Menu menu = new Menu();
+        public static Inventory inventory = new Inventory();
 
         static void Main(string[] args)
         {
@@ -29,7 +30,7 @@ namespace mhgConsoleApp
 
                          foreach (Pizza pizza in pizzas)
                          {
-                             Console.WriteLine(pizza.name + " " + pizza.hind);
+                             Console.WriteLine(pizza.name + ", Hind: " + pizza.hind);
                              Console.WriteLine("Koostisosad: ");
                              foreach (var koostisosa in pizza.koostisosadList)
                              {
@@ -37,7 +38,12 @@ namespace mhgConsoleApp
                              }
 
                              Console.WriteLine("");
-                         }
+                             Console.WriteLine("");
+                        }
+                     }
+                     else if (verifiedCommand == "INVENTORY")
+                     {
+                         Console.WriteLine(Inventory.GetInventory());
                      }
                  }
             }

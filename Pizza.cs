@@ -4,7 +4,7 @@
     {
         public string name;
         public float hind;
-        public List<koostisosad> koostisosadList;
+        public koostisosad[] koostisosadList;
         public enum koostisosad
         {
             juust,
@@ -13,7 +13,7 @@
             rukola
         }
 
-        public Pizza(string name, float hind, List<koostisosad> koostisosad)
+        public Pizza(string name, float hind, koostisosad[] koostisosad)
         {
             this.name = name;
             this.hind = hind;
