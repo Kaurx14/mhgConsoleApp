@@ -8,19 +8,19 @@ namespace mhgConsoleApp
 {
     public class Inventory
     {
-        public static int pitsapõhi = 10;
-        public static int gluteenivabaPitsapõhi = 10;
-        public static int juust = 10;
-        public static int kaste = 10;
-        public static int pepperoni = 10;
-        public static int rukola = 10;
-        public static int salami = 10;
-        public static int kana = 10;
-        public static int sink = 10;
-        public static int shampinjonid = 10;
-        public static int oliivid = 10;
-        public static int hakkliha = 10;
-        public static int ananass = 10;
+        public static int pitsapõhi = 100;
+        public static int gluteenivabaPitsapõhi = 100;
+        public static int juust = 100;
+        public static int kaste = 100;
+        public static int pepperoni = 100;
+        public static int rukola = 100;
+        public static int salami = 100;
+        public static int kana = 100;
+        public static int sink = 100;
+        public static int shampinjonid = 100;
+        public static int oliivid = 100;
+        public static int hakkliha = 100;
+        public static int ananass = 100;
 
 
         public string GetInventory()
