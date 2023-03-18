@@ -7,10 +7,20 @@
         public koostisosa[] koostisosadList;
         public enum koostisosa
         {
+            pitsapõhi,
+            kaste,
             juust,
             pepperoni,
-            tomatikaste,
-            rukola
+            rukola,
+            salami,
+            kana,
+            sink,
+            šampinjonid,
+            oliivid,
+            tomatid,
+            hakkliha,
+            ananass,
+
         }
 
         public Pizza(string name, float hind, koostisosa[] koostisosa)

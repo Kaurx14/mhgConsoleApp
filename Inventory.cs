@@ -11,7 +11,7 @@ namespace mhgConsoleApp
         public static int pepperoni = 10;
         public static int rukola = 10;
         public static int juust = 10;
-        public static int tomatikaste = 10;
+        public static int kaste = 10;
 
         public string GetInventory()
         {

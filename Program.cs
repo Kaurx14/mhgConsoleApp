@@ -101,7 +101,7 @@ namespace mhgConsoleApp
                      }
                      else if (verifiedCommand == "ADD PIZZA")
                      {
-                         
+                         menu.Ad
                      }
                      else if (verifiedCommand == "HISTORY")
                      {

@@ -12,7 +12,7 @@ namespace mhgConsoleApp
 
         public void RestockInventory(Pizza.koostisosa koostisosa, int kogus)
         {
-            if(koostisosa == Pizza.koostisosa.pepperoni)
+            if (koostisosa == Pizza.koostisosa.pepperoni)
             {
                 Inventory.pepperoni += kogus;
                 restockingPrice = kogus * Money.pepperoniTkHind;
@@ -30,10 +30,10 @@ namespace mhgConsoleApp
                 restockingPrice = kogus * Money.rukolaTkHind;
                 Money.money -= restockingPrice;
             }
-            if (koostisosa == Pizza.koostisosa.pepperoni)
+            if (koostisosa == Pizza.koostisosa.kaste)
             {
-                Inventory.tomatikaste += kogus;
-                restockingPrice = kogus * Money.tomatikasteTkHind;
+                Inventory.kaste += kogus;
+                restockingPrice = kogus * Money.kasteTkHind;
                 Money.money -= restockingPrice;
             }
         }
