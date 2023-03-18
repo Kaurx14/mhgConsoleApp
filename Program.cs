@@ -1,9 +1,32 @@
-﻿static void Main(string[] args)
-{
-    Console.WriteLine("Program started!");
+﻿using mhgConsoleApp;
 
-    while (true)
+namespace mhgConsoleApp
+{
+    class Program
     {
-        Console.WriteLine("Ootan käsklusi!");
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Program started!");
+
+            while (true)
+            {
+                Console.WriteLine("Sisestage käsklus: ");
+                string userCommand = Console.ReadLine();
+
+                 string verifiedCommand = käsklus.VerifyCommand(userCommand);
+
+                 if (verifiedCommand == null)
+                 {
+                     Console.WriteLine("Käsklus ei ole korrektne!");
+                 }
+                 else
+                 {
+                     if (verifiedCommand == "MENU")
+                     {
+
+                     }
+                 }
+            }
+        }
     }
 }
