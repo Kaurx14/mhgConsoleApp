@@ -28,7 +28,7 @@ namespace mhgConsoleApp
             Console.WriteLine("MONEY - näitab kogu kassaraha");
             Console.WriteLine("ORDER - teeb tellimuse");
             Console.WriteLine("RESTOCK - täidab inventuuri");
-            Console.WriteLine("ADD - lisab uue pizza menüüsse");
+            Console.WriteLine("ADD PIZZA - lisab uue pizza menüüsse");
             ConsoleSpace();
             Console.WriteLine("##Võimalikud näited##");
             Console.WriteLine("MENU");
