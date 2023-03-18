@@ -40,7 +40,7 @@ namespace mhgConsoleApp
 
                          foreach (Pizza pizza in pizzas)
                          {
-                             Console.WriteLine(pizza.name + ", Hind: " + pizza.hind.ToString("0.0") + "€");
+                             Console.WriteLine(pizza.name + ", Hind: " + pizza.hind.ToString("0.0") + "$");
                              Console.WriteLine("Koostisosad: ");
                              foreach (var koostisosa in pizza.koostisosadList)
                              {
@@ -70,7 +70,7 @@ namespace mhgConsoleApp
                                  OrderedPizzaName = "";
                                  order.OnPizzaBought(pizza);
                                  Console.WriteLine("Tellitud pitsa: " + pizza.name);
-                                 Console.WriteLine("Pitsa hind: " + pizza.hind + "€");
+                                 Console.WriteLine("Pitsa hind: " + pizza.hind + "$");
                                  Console.WriteLine("Koostisosad: ");
                                  foreach (var koostisosa in pizza.koostisosadList)
                                  {
