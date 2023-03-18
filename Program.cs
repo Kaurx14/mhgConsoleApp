@@ -40,6 +40,7 @@ namespace mhgConsoleApp
             Console.WriteLine("ORDER Pepperoni laktoosivaba");
             Console.WriteLine("RESTOCK kana 50");
             Console.WriteLine("RESTOCK kaste 25");
+            Console.WriteLine("ADD PIZZA");
 
             while (true)
             {
@@ -181,11 +182,6 @@ namespace mhgConsoleApp
             {
                 isValid = true;
                 ChosenKoostisosa = Pizza.koostisosa.pitsapõhi;
-            }
-            else if (OrderedKoostisosa == "gluteenivabaPitsapõhi")
-            {
-                isValid = true;
-                ChosenKoostisosa = Pizza.koostisosa.gluteenivabaPitsapõhi;
             }
             else if (OrderedKoostisosa == "oliivid")
             {
