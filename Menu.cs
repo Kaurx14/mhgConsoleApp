@@ -30,5 +30,11 @@ namespace mhgConsoleApp
             }
             return null;
         }
+
+        public List<T> ArrayToList<T>(T[] arr)
+        {
+            List<T> list = new List<T>(arr);
+            return list;
+        }
     }
 }

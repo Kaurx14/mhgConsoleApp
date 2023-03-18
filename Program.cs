@@ -8,8 +8,11 @@ namespace mhgConsoleApp
         public static Inventory inventory = new Inventory();
         public static Money money = new Money();
         public static Order order = new Order();
+        public static Restock restock = new Restock();
 
         public static string OrderedPizzaName;
+        public static string OrderedKoostisosa;
+        public static string OrderedKoostisosaAmount;
 
         static void Main(string[] args)
         {
@@ -84,7 +87,16 @@ namespace mhgConsoleApp
                      }
                      else if (verifiedCommand == "RESTOCK")
                      {
-                         
+                         if (CheckIfKoostisosaIsValid())
+                         {
+
+                         }
+                         else
+                         {
+                             Console.WriteLine("");
+                         }
+
+                         restock.RestockInventory();
                      }
                      else if (verifiedCommand == "ADD PIZZA")
                      {
@@ -106,6 +118,30 @@ namespace mhgConsoleApp
         {
             Console.WriteLine("");
             Console.WriteLine("");
+        }
+
+        private static bool CheckIfKoostisosaIsValid()
+        {
+            bool isValid = false;
+
+            if (OrderedKoostisosa == "juust")
+            {
+                isValid = true;
+            }
+            else if (OrderedKoostisosa == "pepperoni")
+            {
+                isValid = true;
+            }
+            else if (OrderedKoostisosa == "rukola")
+            {
+                isValid = true;
+            }
+            else if (OrderedKoostisosa == "tomatikaste")
+            {
+                isValid = true;
+            }
+
+            return isValid;
         }
     }
 }
