@@ -145,6 +145,32 @@ namespace mhgConsoleApp
                 isValid = true;
                 ChosenKoostisosa = Pizza.koostisosa.kaste;
             }
+            else if (OrderedKoostisosa == "pitsapõhi")
+            {
+                isValid = true;
+                ChosenKoostisosa = Pizza.koostisosa.pitsapõhi;
+            }
+            else if (OrderedKoostisosa == "tomatid")
+            {
+                isValid = true;
+                ChosenKoostisosa = Pizza.koostisosa.tomatid;
+            }
+            else if (OrderedKoostisosa == "oliivid")
+            {
+                isValid = true;
+                ChosenKoostisosa = Pizza.koostisosa.oliivid;
+            }
+            else if (OrderedKoostisosa == "šampinjonid")
+            {
+                isValid = true;
+                ChosenKoostisosa = Pizza.koostisosa.šampinjonid;
+            }
+            else if (OrderedKoostisosa == "kana")
+            {
+                isValid = true;
+                ChosenKoostisosa = Pizza.koostisosa.kana;
+            }
+            else if (OrderedKoostisosa == "")
 
             return isValid;
         }

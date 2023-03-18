@@ -56,7 +56,7 @@ namespace mhgConsoleApp
                 currentPizzaHind += Money.juustTkHind;
                 uuePitsaKoostisosad.Add(Pizza.koostisosa.juust);
             }
-            if (koostisosad.Contains("tomatikaste"))
+            if (koostisosad.Contains("kaste"))
             {
                 currentPizzaHind += Money.kasteTkHind;
                 uuePitsaKoostisosad.Add(Pizza.koostisosa.kaste);
