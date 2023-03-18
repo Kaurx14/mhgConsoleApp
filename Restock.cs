@@ -8,9 +8,27 @@ namespace mhgConsoleApp
 {
     public class Restock
     {
+
+
         public static void RestockInventory(Pizza.koostisosa koostisosa, int kogus)
         {
-            Inventory.pepperoni = 10;
+            if(koostisosa == Pizza.koostisosa.pepperoni)
+            {
+                Inventory.pepperoni += kogus;
+
+            }
+            if (koostisosa == Pizza.koostisosa.juust)
+            {
+                Inventory.juust += kogus;
+            }
+            if (koostisosa == Pizza.koostisosa.rukola)
+            {
+                Inventory.rukola += kogus;
+            }
+            if (koostisosa == Pizza.koostisosa.pepperoni)
+            {
+                Inventory.tomatikaste += kogus;
+            }
         }
     }
 }

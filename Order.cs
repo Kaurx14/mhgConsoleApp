@@ -10,7 +10,7 @@ namespace mhgConsoleApp
     {
         public void OnPizzaBought(Pizza orderedPizza)
         {
-            Money.money += 1;
+            Money.money += orderedPizza.hind;
 
             var koostisosad = orderedPizza.koostisosadList;
 
