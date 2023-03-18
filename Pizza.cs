@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace mhgConsoleApp
+﻿namespace mhgConsoleApp
 {
     public class Pizza
     {
@@ -19,11 +13,11 @@ namespace mhgConsoleApp
             rukola
         }
 
-        public Pizza(string name, float hind, koostisosad[] koostisosad)
+        public Pizza(string name, float hind, List<koostisosad> koostisosad)
         {
             this.name = name;
             this.hind = hind;
-            koostisosad = koostisosad;
+            this.koostisosadList = koostisosad;
         }
         
     }
