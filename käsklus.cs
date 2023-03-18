@@ -13,14 +13,8 @@ namespace mhgConsoleApp
         {
             command = command.ToUpper();
 
-            if (commands.Contains(command))
-                return command;
-            else 
-                return null;
-
-            return null;
-
-            return null;
+            if (commands.Contains(command)) return command;
+            else return null;
         }
     }
 }

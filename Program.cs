@@ -11,9 +11,21 @@ namespace mhgConsoleApp
             while (true)
             {
                 Console.WriteLine("Sisestage käsklus: ");
-                string command = Console.ReadLine();
+                string userCommand = Console.ReadLine();
 
-                käsklus.DetermineCommand(command);
+                 string verifiedCommand = käsklus.VerifyCommand(userCommand);
+
+                 if (verifiedCommand == null)
+                 {
+                     Console.WriteLine("Käsklus ei ole korrektne!");
+                 }
+                 else
+                 {
+                     if (verifiedCommand == "MENU")
+                     {
+
+                     }
+                 }
             }
         }
     }
