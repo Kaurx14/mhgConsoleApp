@@ -8,28 +8,33 @@ namespace mhgConsoleApp
 {
     public class Restock
     {
+        public float restockingPrice = 0;
+
         public void RestockInventory(Pizza.koostisosa koostisosa, int kogus)
         {
             if(koostisosa == Pizza.koostisosa.pepperoni)
             {
                 Inventory.pepperoni += kogus;
-                Money.money -= kogus * Money.pepperoniTkHind;
-
+                restockingPrice = kogus * Money.pepperoniTkHind;
+                Money.money -= restockingPrice;
             }
             if (koostisosa == Pizza.koostisosa.juust)
             {
                 Inventory.juust += kogus;
-                Money.money -= kogus * Money.juustTkHind;
+                restockingPrice = kogus * Money.juustTkHind;
+                Money.money -= restockingPrice;
             }
             if (koostisosa == Pizza.koostisosa.rukola)
             {
                 Inventory.rukola += kogus;
-                Money.money -= kogus * Money.rukolaTkHind;
+                restockingPrice = kogus * Money.rukolaTkHind;
+                Money.money -= restockingPrice;
             }
             if (koostisosa == Pizza.koostisosa.pepperoni)
             {
                 Inventory.tomatikaste += kogus;
-                Money.money -= kogus * Money.pepperoniTkHind;
+                restockingPrice = kogus * Money.tomatikasteTkHind;
+                Money.money -= restockingPrice;
             }
         }
     }
