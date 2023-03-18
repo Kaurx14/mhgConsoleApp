@@ -150,11 +150,6 @@ namespace mhgConsoleApp
                 isValid = true;
                 ChosenKoostisosa = Pizza.koostisosa.pitsapõhi;
             }
-            else if (OrderedKoostisosa == "tomatid")
-            {
-                isValid = true;
-                ChosenKoostisosa = Pizza.koostisosa.tomatid;
-            }
             else if (OrderedKoostisosa == "oliivid")
             {
                 isValid = true;
@@ -170,7 +165,26 @@ namespace mhgConsoleApp
                 isValid = true;
                 ChosenKoostisosa = Pizza.koostisosa.kana;
             }
-            else if (OrderedKoostisosa == "")
+            else if (OrderedKoostisosa == "salami")
+            {
+                isValid = true;
+                ChosenKoostisosa = Pizza.koostisosa.salami;
+            }
+            else if (OrderedKoostisosa == "sink")
+            {
+                isValid = true;
+                ChosenKoostisosa = Pizza.koostisosa.sink;
+            }
+            else if (OrderedKoostisosa == "hakkliha")
+            {
+                isValid = true;
+                ChosenKoostisosa = Pizza.koostisosa.hakkliha;
+            }
+            else if (OrderedKoostisosa == "ananass")
+            {
+                isValid = true;
+                ChosenKoostisosa = Pizza.koostisosa.ananass;
+            }
 
             return isValid;
         }

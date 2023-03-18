@@ -46,10 +46,10 @@ namespace mhgConsoleApp
             float currentPizzaHind = 0;
             List<Pizza.koostisosa> uuePitsaKoostisosad = new List<Pizza.koostisosa>();
 
-            if (pitsaKoostisosad.Contains("pepperoni"))
+            if (pitsaKoostisosad.Contains("pitsapõhi"))
             {
-                currentPizzaHind += Money.pepperoniTkHind;
-                uuePitsaKoostisosad.Add(Pizza.koostisosa.pepperoni);
+                currentPizzaHind += Money.pizzapõhiTkHind;
+                uuePitsaKoostisosad.Add(Pizza.koostisosa.pitsapõhi);
             }
             if (pitsaKoostisosad.Contains("juust"))
             {
@@ -66,6 +66,46 @@ namespace mhgConsoleApp
             {
                 currentPizzaHind += Money.rukolaTkHind;
                 uuePitsaKoostisosad.Add(Pizza.koostisosa.rukola);
+            }
+            if (pitsaKoostisosad.Contains("pepperoni"))
+            {
+                currentPizzaHind += Money.pepperoniTkHind;
+                uuePitsaKoostisosad.Add(Pizza.koostisosa.pepperoni);
+            }
+            if (pitsaKoostisosad.Contains("salami"))
+            {
+                currentPizzaHind += Money.salamiTkHind;
+                uuePitsaKoostisosad.Add(Pizza.koostisosa.salami);
+            }
+            if (pitsaKoostisosad.Contains("kana"))
+            {
+                currentPizzaHind += Money.kanaTkHind;
+                uuePitsaKoostisosad.Add(Pizza.koostisosa.kana);
+            }
+            if (pitsaKoostisosad.Contains("sink"))
+            {
+                currentPizzaHind += Money.sinkTkHInd;
+                uuePitsaKoostisosad.Add(Pizza.koostisosa.sink);
+            }
+            if (pitsaKoostisosad.Contains("šampinjonid"))
+            {
+                currentPizzaHind += Money.šampinjonidTkHind;
+                uuePitsaKoostisosad.Add(Pizza.koostisosa.šampinjonid);
+            }
+            if (pitsaKoostisosad.Contains("oliivid"))
+            {
+                currentPizzaHind += Money.oliividTkHind;
+                uuePitsaKoostisosad.Add(Pizza.koostisosa.oliivid);
+            }
+            if (pitsaKoostisosad.Contains("hakkliha"))
+            {
+                currentPizzaHind += Money.hakklihaTkHind;
+                uuePitsaKoostisosad.Add(Pizza.koostisosa.hakkliha);
+            }
+            if (pitsaKoostisosad.Contains("ananass"))
+            {
+                currentPizzaHind += Money.ananassTkHind;
+                uuePitsaKoostisosad.Add(Pizza.koostisosa.ananass);
             }
 
             Pizza.koostisosa[] lõppPitsaKoostisosad = ListToArray<Pizza.koostisosa>(uuePitsaKoostisosad);
