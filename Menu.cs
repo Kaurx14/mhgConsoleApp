@@ -51,6 +51,11 @@ namespace mhgConsoleApp
                 currentPizzaHind += Money.pizzapõhiTkHind;
                 uuePitsaKoostisosad.Add(Pizza.koostisosa.pitsapõhi);
             }
+            if (pitsaKoostisosad.Contains("gluteenivabaPitsapõhi"))
+            {
+                currentPizzaHind += Money.gluteenivabaPitsapõhiTkHind;
+                uuePitsaKoostisosad.Add(Pizza.koostisosa.gluteenivabaPitsapõhi);
+            }
             if (pitsaKoostisosad.Contains("juust"))
             {
                 currentPizzaHind += Money.juustTkHind;
