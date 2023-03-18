@@ -1,8 +1,9 @@
-﻿Console.WriteLine("Program started!");
-
-while (true)
+﻿static void Main(string[] args)
 {
-    Console.WriteLine("Sisestage käsklus!");
-    string userCommand = Console.ReadLine();
+    Console.WriteLine("Program started!");
 
+    while (true)
+    {
+        Console.WriteLine("Ootan käsklusi!");
+    }
 }
