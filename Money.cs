@@ -8,7 +8,7 @@ namespace mhgConsoleApp
 {
     public class Money
     {
-        public static int money = 0;
+        public static int money = 10;
 
         public static string GetMoney()
         {
