@@ -50,7 +50,7 @@ namespace mhgConsoleApp
             else return null;
         }
 
-        private static string[] SplitSentence(string command)
+        public static string[] SplitSentence(string command)
         {
             string[] words = command.Split(' ');
 
