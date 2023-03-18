@@ -15,9 +15,9 @@ namespace mhgConsoleApp
 
         }
 
-        //public string GetIngredientsOfPizza(string orederedPizza)
+        //public Pizza.koostisosad[] GetIngredientsOfPizza(Pizza orderedPizza)
         //{
-            
+        //    return orderedPizza.koostisosadList;
         //}
     }
 }

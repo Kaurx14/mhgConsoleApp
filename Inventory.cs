@@ -14,7 +14,7 @@ namespace mhgConsoleApp
 
         public static string GetInventory()
         {
-            string inventory = "Poes olevad koostisosad: \n \n" + "Pepperoni: " + pepperoni + " Rukola: " + rukola + " Juust: " + juust;
+            string inventory = "Poes olevad koostisosad: \n \n" + "Pepperoni: " + pepperoni + "\n Rukola: " + rukola + "\n Juust: " + juust;
 
             return inventory;
         }
